@@ -2,176 +2,297 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <title>EcoVida Sustentável</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>EcoVida Sustentável</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
+<header>
 
-        <h1>EcoVida Sustentável</h1>
-        <p>Soluções ecológicas para um futuro melhor</p>
+<h1>EcoVida Sustentável</h1>
+<p>Soluções ecológicas para um futuro melhor</p>
 
-        <nav>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+<nav>
+<ul>
+<li><a href="#inicio" id="menuInicio">Início</a></li>
+<li><a href="#servicos" id="menuServicos">Serviços</a></li>
+<li><a href="#contato" id="menuContato">Contato</a></li>
+</ul>
+</nav>
 
-    </header>
+<p id="mensagemMenu"></p>
 
-    <main>
+</header>
 
-        <section id="inicio">
+<main>
 
-            <h2>Sobre a empresa</h2>
+<section id="inicio">
 
-            <p>A EcoVida Sustentável é uma empresa fictícia dedicada ao desenvolvimento de projetos voltados para
-                sustentabilidade e preservação ambiental.</p>
+<h2>Sobre a empresa</h2>
 
-            <p>Nossa equipe trabalha criando soluções que ajudam empresas e pessoas a reduzirem impactos ambientais e
-                adotarem práticas mais conscientes.</p>
+<p id="textoEmpresa">
+A EcoVida Sustentável é uma empresa fictícia dedicada ao desenvolvimento de projetos voltados para sustentabilidade.
+</p>
 
-            <article>
+<button id="btnAlterarTexto">Alterar texto</button>
 
-                <h3>Nossa missão</h3>
+<p>
+Nossa equipe trabalha criando soluções que ajudam empresas e pessoas a reduzirem impactos ambientais.
+</p>
 
-                <p>Promover práticas sustentáveis e incentivar o uso responsável dos recursos naturais, contribuindo
-                    para um planeta mais equilibrado.</p>
+<article>
+<h3>Nossa missão</h3>
+<p>Promover práticas sustentáveis e incentivar o uso responsável dos recursos naturais.</p>
+</article>
 
-            </article>
+<img id="imagemSite" src="planta.jpg" width="300">
 
-            <img src="planta.jpg"
-                alt="Planta verde representando sustentabilidade">
+<br><br>
 
-        </section>
+<button id="btnMensagem">Clique para receber uma mensagem</button>
+<p id="mensagem"></p>
 
-
-        <section id="servicos">
-
-            <h2>Serviços oferecidos</h2>
-
-            <ul>
-                <li>Consultoria ambiental</li>
-                <li>Projetos de energia renovável</li>
-                <li>Treinamentos sobre sustentabilidade</li>
-                <li>Planejamento de redução de resíduos</li>
-            </ul>
-
-        </section>
+</section>
 
 
-        <section>
+<section id="servicos">
 
-            <h2>Tabela de planos</h2>
+<h2>Serviços oferecidos</h2>
 
-            <table>
+<ul>
+<li>Consultoria ambiental</li>
+<li>Projetos de energia renovável</li>
+<li>Treinamentos sobre sustentabilidade</li>
+<li>Planejamento de redução de resíduos</li>
+</ul>
 
-                <thead>
-                    <tr>
-                        <th>Plano</th>
-                        <th>Serviços incluídos</th>
-                        <th>Valor mensal</th>
-                    </tr>
-                </thead>
+<button id="btnCor">Mudar cor da seção</button>
 
-                <tbody>
-                    <tr>
-                        <td>Básico</td>
-                        <td>Consultoria simples</td>
-                        <td>R$ 200</td>
-                    </tr>
-
-                    <tr>
-                        <td>Intermediário</td>
-                        <td>Consultoria + treinamento</td>
-                        <td>R$ 500</td>
-                    </tr>
-
-                    <tr>
-                        <td>Avançado</td>
-                        <td>Projetos completos</td>
-                        <td>R$ 900</td>
-                    </tr>
-
-                    <tr>
-                        <td>Empresarial</td>
-                        <td>Consultoria + implementação</td>
-                        <td>R$ 1.500</td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </section>
+</section>
 
 
-        <section>
+<section>
 
-            <h2>Vídeo sobre sustentabilidade</h2>
+<h2>Tabela de planos</h2>
 
-            <div class="video">
+<table>
 
-                <iframe width="560" height="315" 
-                src="https://www.youtube.com/embed/UDUoyBwLXaQ?si=qttv6ua1Jak_Lim4" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen></iframe>
+<thead>
+<tr>
+<th>Plano</th>
+<th>Serviços incluídos</th>
+<th>Valor</th>
+</tr>
+</thead>
 
-            </div>
+<tbody>
 
-        </section>
+<tr>
+<td>Básico</td>
+<td>Consultoria simples</td>
+<td>R$200</td>
+</tr>
 
+<tr>
+<td>Intermediário</td>
+<td>Consultoria + treinamento</td>
+<td>R$500</td>
+</tr>
 
-        <section id="contato">
+<tr>
+<td>Avançado</td>
+<td>Projetos completos</td>
+<td>R$900</td>
+</tr>
 
-            <h2>Formulário de contato</h2>
+</tbody>
 
-            <form>
+</table>
 
-                <label>Nome:</label><br>
-                <input type="text" name="nome"><br><br>
-
-                <label>Email:</label><br>
-                <input type="email" name="email"><br><br>
-
-                <label>Telefone:</label><br>
-                <input type="tel" name="telefone"><br><br>
-
-                <label>Mensagem:</label><br>
-                <textarea name="mensagem"></textarea><br><br>
-
-                <button type="submit">Enviar</button>
-
-            </form>
-
-            <p>Saiba mais sobre sustentabilidade:</p>
-
-            <a href="https://www.nationalgeographic.com/environment" target="_blank">
-                Visitar site sobre meio ambiente
-            </a>
-
-        </section>
-
-    </main>
+</section>
 
 
-    <footer>
+<section>
 
-        <p>Telefone: (27) 98888-7777</p>
-        <p>Email: contato@ecovida.com</p>
-        <p>Endereço: Avenida Verde, 456 - Cidade Sustentável</p>
-        <p>© 2026 EcoVida Sustentável</p>
+<h2>Vídeo sobre sustentabilidade</h2>
 
-    </footer>
+<div class="video">
+
+<iframe src="https://www.youtube.com/embed/UDUoyBwLXaQ" allowfullscreen></iframe>
+
+</div>
+
+</section>
+
+
+<section id="contato">
+
+<h2>Formulário de contato</h2>
+
+<form id="formContato">
+
+<label>Nome:</label><br>
+<input type="text" id="nome"><br><br>
+
+<label>Email:</label><br>
+<input type="email"><br><br>
+
+<label>Mensagem:</label><br>
+<textarea></textarea><br><br>
+
+<button type="submit">Enviar</button>
+
+</form>
+
+<br>
+
+<button id="contadorBtn">Clique aqui</button>
+<p id="contador">Cliques: 0</p>
+
+<br>
+
+<button id="modoEscuro">🌙 Modo Escuro</button>
+
+</section>
+
+</main>
+
+<footer>
+
+<p>Telefone: (27) 98888-7777</p>
+<p>Email: contato@ecovida.com</p>
+<p>© 2026 EcoVida Sustentável</p>
+
+</footer>
+
+
+<script>
+
+/* ALERTA AO CARREGAR */
+
+window.addEventListener("load", function(){
+alert("Bem-vindo ao site EcoVida Sustentável!");
+});
+
+
+/* MENSAGEM */
+
+document.getElementById("btnMensagem").addEventListener("click", function(){
+
+document.getElementById("mensagem").textContent =
+"Bem-vindo ao meu site desenvolvido com HTML, CSS e JavaScript!";
+
+});
+
+
+/* ALTERAR TEXTO */
+
+let textoOriginal = document.getElementById("textoEmpresa").textContent;
+
+let textoNovo =
+"Este site agora possui interatividade com JavaScript!";
+
+document.getElementById("btnAlterarTexto").addEventListener("click", function(){
+
+let texto = document.getElementById("textoEmpresa");
+
+if(texto.textContent === textoOriginal){
+texto.textContent = textoNovo;
+}else{
+texto.textContent = textoOriginal;
+}
+
+});
+
+
+/* MUDAR COR */
+
+document.getElementById("btnCor").addEventListener("click", function(){
+
+let servicos = document.getElementById("servicos");
+
+if(servicos.style.backgroundColor === "lightgreen"){
+servicos.style.backgroundColor = "";
+}else{
+servicos.style.backgroundColor = "lightgreen";
+}
+
+});
+
+
+/* MENU */
+
+document.getElementById("menuInicio").addEventListener("click", function(){
+mensagemMenu.textContent = "Você acessou a seção Início.";
+});
+
+document.getElementById("menuServicos").addEventListener("click", function(){
+mensagemMenu.textContent = "Você acessou a seção Serviços.";
+});
+
+document.getElementById("menuContato").addEventListener("click", function(){
+mensagemMenu.textContent = "Você acessou a seção Contato.";
+});
+
+
+/* TROCA DE IMAGEM */
+
+let img = document.getElementById("imagemSite");
+
+img.addEventListener("mouseover", function(){
+img.src = "planta2.jpg";
+});
+
+img.addEventListener("mouseout", function(){
+img.src = "planta.jpg";
+});
+
+
+/* CONTADOR DE CLIQUES */
+
+let cont = 0;
+
+document.getElementById("contadorBtn").addEventListener("click", function(){
+
+cont++;
+document.getElementById("contador").textContent = "Cliques: " + cont;
+
+});
+
+
+/* MODO ESCURO */
+
+let botaoModo = document.getElementById("modoEscuro");
+
+botaoModo.addEventListener("click", function(){
+
+document.body.classList.toggle("dark");
+
+if(document.body.classList.contains("dark")){
+botaoModo.textContent = "☀️ Modo Claro";
+}else{
+botaoModo.textContent = "🌙 Modo Escuro";
+}
+
+});
+
+
+/* VALIDAÇÃO FORMULÁRIO */
+
+document.getElementById("formContato").addEventListener("submit", function(event){
+
+let nome = document.getElementById("nome").value;
+
+if(nome === ""){
+alert("O nome não pode estar vazio");
+event.preventDefault();
+}
+
+});
+
+</script>
 
 </body>
-
 </html>

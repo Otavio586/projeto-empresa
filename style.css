@@ -1,7 +1,8 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial;
     margin: 0;
     background: #f4f9f4;
+    transition: 0.3s;
 }
 
 header {
@@ -16,19 +17,15 @@ nav ul {
     padding: 0;
 }
 
-nav ul li {
+nav li {
     display: inline-block;
     margin: 10px;
 }
 
-nav ul li a {
-    text-decoration: none;
+nav a {
     color: white;
+    text-decoration: none;
     font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #d4ffd4;
 }
 
 section {
@@ -39,7 +36,6 @@ section {
     background: white;
     border: 2px solid #cce5cc;
     border-radius: 10px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 article {
@@ -49,18 +45,15 @@ article {
     border-left: 5px solid #2e8b57;
 }
 
-img{
+img {
     display: block;
-    margin: 20px auto;
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+    margin: auto;
+    margin-top: 20px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
 }
 
 th {
@@ -71,15 +64,8 @@ th {
 
 td {
     padding: 10px;
-    text-align: center;
     border: 1px solid #ccc;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
+    text-align: center;
 }
 
 button {
@@ -93,19 +79,16 @@ button {
 
 button:hover {
     background: #246b45;
-    transition: 0.3s;
 }
 
 .video {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
 }
 
 iframe {
     width: 560px;
     height: 315px;
-    border-radius: 10px;
 }
 
 footer {
@@ -114,4 +97,28 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 30px;
+}
+
+/* modo escuro */
+
+.dark {
+    background: #121212;
+    color: white;
+}
+
+.dark section {
+    background: #1e1e1e;
+    border-color: #333;
+}
+
+.dark article {
+    background: #222;
+}
+
+.dark footer {
+    background: #111;
+}
+
+.dark td {
+    border-color: #444;
 }
