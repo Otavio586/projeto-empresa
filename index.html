@@ -2,10 +2,10 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoVida Sustentável</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -24,11 +24,13 @@
                 </ul>
             </nav>
 
-            <p id="mensagemMenu" class="mensagem-menu" aria-live="polite"></p>
+            <p id="mensagemMenu" class="mensagem-menu"></p>
         </div>
     </header>
 
     <main>
+
+
         <section id="inicio" class="card">
             <h2>Sobre a empresa</h2>
 
@@ -42,15 +44,16 @@
                 <button id="btnMensagem">Clique para receber uma mensagem</button>
             </div>
 
-            <p id="mensagem" class="mensagem-acao" aria-live="polite"></p>
+            <p id="mensagem" class="mensagem-acao"></p>
 
             <article class="mission">
                 <h3>Nossa missão</h3>
                 <p>Promover práticas sustentáveis e incentivar o uso responsável dos recursos naturais.</p>
             </article>
 
-            <img id="imagemSite" src="planta.jpg" alt="Planta ilustrativa" width="300">
+            <img id="imagemSite" src="planta.jpg" alt="Planta" width="300">
         </section>
+
 
         <section id="servicos" class="card">
             <h2>Serviços oferecidos</h2>
@@ -65,6 +68,7 @@
             <button id="btnCor">Mudar cor da seção</button>
         </section>
 
+
         <section id="planos" class="card">
             <h2>Tabela de planos</h2>
 
@@ -77,7 +81,6 @@
                             <th>Valor</th>
                         </tr>
                     </thead>
-
                     <tbody>
                         <tr>
                             <td>Básico</td>
@@ -104,60 +107,65 @@
             <h2>Vídeo sobre sustentabilidade</h2>
 
             <div class="video">
-                <iframe src="https://www.youtube.com/embed/UDUoyBwLXaQ" title="Vídeo sobre sustentabilidade"
-                    allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/UDUoyBwLXaQ" allowfullscreen></iframe>
             </div>
         </section>
+
+
+        <section class="card">
+            <h2>Consulta de CEP</h2>
+            <input type="text" id="cepInput" placeholder="Digite o CEP">
+            <button id="buscarCep">Buscar</button>
+            <div id="resultadoCep"></div>
+        </section>
+
+
+        <section class="card">
+            <h2>Consulta de CNPJ</h2>
+            <input type="text" id="cnpjInput" placeholder="Digite o CNPJ">
+            <button id="buscarCnpj">Buscar</button>
+            <div id="resultadoCnpj"></div>
+        </section>
+
+
+        <section class="card">
+            <h2>Sua localização</h2>
+            <button id="buscarIp">Ver localização</button>
+            <div id="resultadoIp"></div>
+        </section>
+
 
         <section id="contato" class="card">
             <h2>Formulário de contato</h2>
 
-            <form id="formContato" novalidate>
-                <label for="contNome">Nome:</label>
-                <input type="text" id="contNome" name="contNome" required placeholder="Seu nome">
-
-                <label for="contEmail">Email:</label>
-                <input type="email" id="contEmail" name="contEmail" required placeholder="seu@exemplo.com">
-
-                <label for="contMensagem">Mensagem:</label>
-                <textarea id="contMensagem" name="contMensagem" rows="4" required
-                    placeholder="Escreva sua mensagem"></textarea>
+            <form id="formContato">
+                <input type="text" id="contNome" placeholder="Nome">
+                <input type="email" id="contEmail" placeholder="Email">
+                <textarea id="contMensagem" placeholder="Mensagem"></textarea>
 
                 <div class="controls-row">
                     <button type="submit">Enviar</button>
                     <button type="button" id="contadorBtn">Clique aqui</button>
                 </div>
 
-                <p id="contador" class="mensagem-acao">Cliques: 0</p>
+                <p id="contador">Cliques: 0</p>
             </form>
 
-            <div class="controls-row">
-                <button id="modoEscuro" aria-pressed="false">🌙 Modo Escuro</button>
-            </div>
+            <button id="modoEscuro" aria-pressed="false">🌙 Modo Escuro</button>
         </section>
 
-        <section id="cadastro" class="card">
-            <h2>Cadastro de Usuário</h2>
 
-            <form id="formCadastro" novalidate>
-                <label for="cadNome">Nome:</label>
-                <input type="text" id="cadNome" name="cadNome" required placeholder="Nome completo">
+        <section class="card">
+            <h2>Cadastro</h2>
 
-                <label for="cadEmail">Email:</label>
-                <input type="email" id="cadEmail" name="cadEmail" required placeholder="seu@exemplo.com">
+            <form id="formCadastro">
+                <input type="text" id="cadNome" placeholder="Nome">
+                <input type="email" id="cadEmail" placeholder="Email">
+                <input type="password" id="cadSenha" placeholder="Senha">
+                <input type="password" id="cadConfirmar" placeholder="Confirmar senha">
 
-                <label for="cadSenha">Senha:</label>
-                <input type="password" id="cadSenha" name="cadSenha" required placeholder="Senha (mín. 6 caracteres)"
-                    minlength="6">
-
-                <label for="cadConfirmar">Confirmar Senha:</label>
-                <input type="password" id="cadConfirmar" name="cadConfirmar" required placeholder="Repita a senha">
-
-                <div class="controls-row">
-                    <button type="submit">Cadastrar</button>
-                </div>
-
-                <p id="mensagemCadastro" class="mensagem-acao" aria-live="polite"></p>
+                <button type="submit">Cadastrar</button>
+                <p id="mensagemCadastro"></p>
             </form>
         </section>
 
@@ -165,122 +173,150 @@
 
     <footer>
         <div class="footer-inner">
-            <p>Telefone: (27) 98888-7777</p>
-            <p>Email: contato@ecovida.com</p>
             <p>© 2026 EcoVida Sustentável</p>
         </div>
     </footer>
 
     <script>
-        window.addEventListener('load', function () {
+
+        window.addEventListener('load', () => {
             alert('Bem-vindo ao site EcoVida Sustentável!');
         });
 
-        document.getElementById('btnMensagem').addEventListener('click', function () {
-            document.getElementById('mensagem').textContent = 'Bem-vindo ao meu site desenvolvido com HTML, CSS e JavaScript!';
-        });
 
-        const textoOriginal = document.getElementById('textoEmpresa').textContent;
-        const textoNovo = 'Este site agora possui interatividade com JavaScript!';
-        document.getElementById('btnAlterarTexto').addEventListener('click', function () {
-            const textoEl = document.getElementById('textoEmpresa');
-            textoEl.textContent = (textoEl.textContent === textoOriginal) ? textoNovo : textoOriginal;
-        });
+        const msgMenu = document.getElementById("mensagemMenu");
 
-        document.getElementById('btnCor').addEventListener('click', function () {
-            const serv = document.getElementById('servicos');
-            if (serv.classList.contains('servicos-highlight')) {
-                serv.classList.remove('servicos-highlight');
-            } else {
-                serv.classList.add('servicos-highlight');
-            }
-        });
+        menuInicio.onclick = () => msgMenu.textContent = "Você acessou Início";
+        menuServicos.onclick = () => msgMenu.textContent = "Você acessou Serviços";
+        menuPlanos.onclick = () => msgMenu.textContent = "Você acessou Planos";
+        menuContato.onclick = () => msgMenu.textContent = "Você acessou Contato";
 
-        const mensagemMenuEl = document.getElementById('mensagemMenu');
-        document.getElementById('menuInicio').addEventListener('click', function () {
-            mensagemMenuEl.textContent = 'Você acessou a seção Início.';
-        });
-        document.getElementById('menuServicos').addEventListener('click', function () {
-            mensagemMenuEl.textContent = 'Você acessou a seção Serviços.';
-        });
-        document.getElementById('menuPlanos').addEventListener('click', function () {
-            mensagemMenuEl.textContent = 'Você acessou a seção Planos.';
-        });
-        document.getElementById('menuContato').addEventListener('click', function () {
-            mensagemMenuEl.textContent = 'Você acessou a seção Contato.';
-        });
 
-        const imagemSite = document.getElementById('imagemSite');
-        imagemSite.addEventListener('mouseover', function () {
-            imagemSite.src = 'planta2.jpg';
-        });
-        imagemSite.addEventListener('mouseout', function () {
-            imagemSite.src = 'planta.jpg';
-        });
+        btnMensagem.onclick = () => {
+            mensagem.textContent = "Bem-vindo ao site com JavaScript!";
+        };
+
+        const textoOriginal = textoEmpresa.textContent;
+        const textoNovo = "Este site agora possui interatividade com JavaScript!";
+
+        btnAlterarTexto.onclick = () => {
+            textoEmpresa.textContent =
+                textoEmpresa.textContent === textoOriginal ? textoNovo : textoOriginal;
+        };
+
+        btnCor.onclick = () => {
+            servicos.classList.toggle("servicos-highlight");
+        };
+
+
+        imagemSite.onmouseover = () => imagemSite.src = "planta2.jpg";
+        imagemSite.onmouseout = () => imagemSite.src = "planta.jpg";
+
 
         let cont = 0;
-        const contadorEl = document.getElementById('contador');
-        document.getElementById('contadorBtn').addEventListener('click', function () {
+        contadorBtn.onclick = () => {
             cont++;
-            contadorEl.textContent = 'Cliques: ' + cont;
-        });
+            contador.textContent = "Cliques: " + cont;
+        };
 
-        const botaoModo = document.getElementById('modoEscuro');
-        botaoModo.addEventListener('click', function () {
-            document.body.classList.toggle('dark');
-            const isDark = document.body.classList.contains('dark');
-            botaoModo.textContent = isDark ? '☀️ Modo Claro' : '🌙 Modo Escuro';
-            botaoModo.setAttribute('aria-pressed', isDark ? 'true' : 'false');
-        });
 
-        document.getElementById('formContato').addEventListener('submit', function (event) {
-            const nome = document.getElementById('contNome').value.trim();
-            const email = document.getElementById('contEmail').value.trim();
-            const mensagem = document.getElementById('contMensagem').value.trim();
+        modoEscuro.onclick = () => {
+            document.body.classList.toggle("dark");
+            const ativo = document.body.classList.contains("dark");
+            modoEscuro.textContent = ativo ? "☀️ Modo Claro" : "🌙 Modo Escuro";
+            modoEscuro.setAttribute("aria-pressed", ativo);
+        };
 
-            if (!nome || !email || !mensagem) {
-                alert('Por favor, preencha todos os campos do formulário de contato.');
-                event.preventDefault();
+
+        formContato.onsubmit = e => {
+            e.preventDefault();
+            if (!contNome.value || !contEmail.value || !contMensagem.value) {
+                alert("Preencha todos os campos!");
+                return;
+            }
+            alert("Mensagem enviada!");
+            formContato.reset();
+        };
+
+
+        formCadastro.onsubmit = e => {
+            e.preventDefault();
+
+            if (cadSenha.value !== cadConfirmar.value) {
+                mensagemCadastro.textContent = "Senhas não coincidem!";
+                mensagemCadastro.className = "error";
                 return;
             }
 
-            
-            alert('Mensagem enviada com sucesso!');
-            event.preventDefault();
-            this.reset();
-        });
+            mensagemCadastro.textContent = "Cadastro realizado com sucesso!";
+            mensagemCadastro.className = "success";
+            formCadastro.reset();
+        };
 
-        document.getElementById('formCadastro').addEventListener('submit', function (event) {
-            event.preventDefault();
 
-            const nome = document.getElementById('cadNome').value.trim();
-            const email = document.getElementById('cadEmail').value.trim();
-            const senha = document.getElementById('cadSenha').value;
-            const confirmar = document.getElementById('cadConfirmar').value;
-            const mensagemCadastro = document.getElementById('mensagemCadastro');
+        buscarCep.onclick = () => {
+            const cep = cepInput.value.replace(/\D/g, "");
 
-            if (!nome || !email || !senha || !confirmar) {
-                mensagemCadastro.textContent = 'Por favor, preencha todos os campos.';
-                mensagemCadastro.style.color = '#b00020';
-                return;
-            }
+            fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                .then(r => r.json())
+                .then(d => {
+                    if (d.erro) {
+                        resultadoCep.textContent = "CEP não encontrado";
+                        return;
+                    }
+                    resultadoCep.innerHTML =
+                        `Rua: ${d.logradouro}<br>Bairro: ${d.bairro}<br>Cidade: ${d.localidade}<br>Estado: ${d.uf}`;
+                })
+                .catch(() => resultadoCep.textContent = "Erro ao buscar CEP");
+        };
 
-            if (senha.length < 6) {
-                mensagemCadastro.textContent = 'A senha deve ter ao menos 6 caracteres.';
-                mensagemCadastro.style.color = '#b00020';
-                return;
-            }
 
-            if (senha !== confirmar) {
-                mensagemCadastro.textContent = 'As senhas não coincidem.';
-                mensagemCadastro.style.color = '#b00020';
-                return;
-            }
+        cnpjInput.oninput = e => {
+            let v = e.target.value.replace(/\D/g, "");
+            v = v.replace(/^(\d{2})(\d)/, "$1.$2");
+            v = v.replace(/^(\d{2})\.(\d{3})(\d)/, "$1.$2.$3");
+            v = v.replace(/\.(\d{3})(\d)/, ".$1/$2");
+            v = v.replace(/(\d{4})(\d)/, "$1-$2");
+            e.target.value = v;
+        };
 
-            mensagemCadastro.textContent = 'Cadastro realizado com sucesso!';
-            mensagemCadastro.style.color = '#2a7a2f';
-            this.reset();
-        });
+        buscarCnpj.onclick = () => {
+            const cnpj = cnpjInput.value.replace(/\D/g, "");
+
+            fetch(`https://brasilapi.com.br/api/cnpj/v1/${cnpj}`)
+                .then(r => r.json())
+                .then(d => {
+                    resultadoCnpj.innerHTML =
+                        `Empresa: ${d.razao_social}<br>Situação: ${d.descricao_situacao_cadastral}<br>${d.municipio} - ${d.uf}`;
+                })
+                .catch(() => resultadoCnpj.textContent = "Erro ao buscar CNPJ");
+        };
+
+        buscarIp.onclick = () => {
+            fetch("http://ip-api.com/json/")
+                .then(r => r.json())
+                .then(d => {
+                    resultadoIp.innerHTML =
+                        `Cidade: ${d.city}<br>Estado: ${d.regionName}<br>País: ${d.country}<br>Provedor: ${d.isp}`;
+                })
+                .catch(() => resultadoIp.textContent = "Erro ao buscar localização");
+        };
+
+        (function () {
+            const iframe = document.getElementById('sustVideoIframe');
+            const fallback = document.getElementById('videoFallback');
+            let loaded = false;
+
+            iframe.addEventListener('load', () => {
+                loaded = true;
+                fallback.style.display = 'none';
+            });
+
+            setTimeout(() => {
+                if (!loaded) fallback.style.display = 'block';
+            }, 6000);
+        })();
+
     </script>
 
 </body>
