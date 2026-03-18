@@ -2,297 +2,287 @@
 <html lang="pt-BR">
 
 <head>
-<meta charset="UTF-8">
-<title>EcoVida Sustentável</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>EcoVida Sustentável</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<header>
-
-<h1>EcoVida Sustentável</h1>
-<p>Soluções ecológicas para um futuro melhor</p>
-
-<nav>
-<ul>
-<li><a href="#inicio" id="menuInicio">Início</a></li>
-<li><a href="#servicos" id="menuServicos">Serviços</a></li>
-<li><a href="#contato" id="menuContato">Contato</a></li>
-</ul>
-</nav>
-
-<p id="mensagemMenu"></p>
-
-</header>
-
-<main>
-
-<section id="inicio">
-
-<h2>Sobre a empresa</h2>
-
-<p id="textoEmpresa">
-A EcoVida Sustentável é uma empresa fictícia dedicada ao desenvolvimento de projetos voltados para sustentabilidade.
-</p>
-
-<button id="btnAlterarTexto">Alterar texto</button>
-
-<p>
-Nossa equipe trabalha criando soluções que ajudam empresas e pessoas a reduzirem impactos ambientais.
-</p>
-
-<article>
-<h3>Nossa missão</h3>
-<p>Promover práticas sustentáveis e incentivar o uso responsável dos recursos naturais.</p>
-</article>
-
-<img id="imagemSite" src="planta.jpg" width="300">
-
-<br><br>
-
-<button id="btnMensagem">Clique para receber uma mensagem</button>
-<p id="mensagem"></p>
-
-</section>
-
-
-<section id="servicos">
-
-<h2>Serviços oferecidos</h2>
-
-<ul>
-<li>Consultoria ambiental</li>
-<li>Projetos de energia renovável</li>
-<li>Treinamentos sobre sustentabilidade</li>
-<li>Planejamento de redução de resíduos</li>
-</ul>
-
-<button id="btnCor">Mudar cor da seção</button>
-
-</section>
-
-
-<section>
-
-<h2>Tabela de planos</h2>
-
-<table>
-
-<thead>
-<tr>
-<th>Plano</th>
-<th>Serviços incluídos</th>
-<th>Valor</th>
-</tr>
-</thead>
-
-<tbody>
-
-<tr>
-<td>Básico</td>
-<td>Consultoria simples</td>
-<td>R$200</td>
-</tr>
-
-<tr>
-<td>Intermediário</td>
-<td>Consultoria + treinamento</td>
-<td>R$500</td>
-</tr>
-
-<tr>
-<td>Avançado</td>
-<td>Projetos completos</td>
-<td>R$900</td>
-</tr>
-
-</tbody>
-
-</table>
-
-</section>
-
-
-<section>
-
-<h2>Vídeo sobre sustentabilidade</h2>
-
-<div class="video">
-
-<iframe src="https://www.youtube.com/embed/UDUoyBwLXaQ" allowfullscreen></iframe>
-
-</div>
-
-</section>
-
-
-<section id="contato">
-
-<h2>Formulário de contato</h2>
-
-<form id="formContato">
-
-<label>Nome:</label><br>
-<input type="text" id="nome"><br><br>
-
-<label>Email:</label><br>
-<input type="email"><br><br>
-
-<label>Mensagem:</label><br>
-<textarea></textarea><br><br>
-
-<button type="submit">Enviar</button>
-
-</form>
-
-<br>
-
-<button id="contadorBtn">Clique aqui</button>
-<p id="contador">Cliques: 0</p>
-
-<br>
-
-<button id="modoEscuro">🌙 Modo Escuro</button>
-
-</section>
-
-</main>
-
-<footer>
-
-<p>Telefone: (27) 98888-7777</p>
-<p>Email: contato@ecovida.com</p>
-<p>© 2026 EcoVida Sustentável</p>
-
-</footer>
-
-
-<script>
-
-/* ALERTA AO CARREGAR */
-
-window.addEventListener("load", function(){
-alert("Bem-vindo ao site EcoVida Sustentável!");
-});
-
-
-/* MENSAGEM */
-
-document.getElementById("btnMensagem").addEventListener("click", function(){
-
-document.getElementById("mensagem").textContent =
-"Bem-vindo ao meu site desenvolvido com HTML, CSS e JavaScript!";
-
-});
-
-
-/* ALTERAR TEXTO */
-
-let textoOriginal = document.getElementById("textoEmpresa").textContent;
-
-let textoNovo =
-"Este site agora possui interatividade com JavaScript!";
-
-document.getElementById("btnAlterarTexto").addEventListener("click", function(){
-
-let texto = document.getElementById("textoEmpresa");
-
-if(texto.textContent === textoOriginal){
-texto.textContent = textoNovo;
-}else{
-texto.textContent = textoOriginal;
-}
-
-});
-
-
-/* MUDAR COR */
-
-document.getElementById("btnCor").addEventListener("click", function(){
-
-let servicos = document.getElementById("servicos");
-
-if(servicos.style.backgroundColor === "lightgreen"){
-servicos.style.backgroundColor = "";
-}else{
-servicos.style.backgroundColor = "lightgreen";
-}
-
-});
-
-
-/* MENU */
-
-document.getElementById("menuInicio").addEventListener("click", function(){
-mensagemMenu.textContent = "Você acessou a seção Início.";
-});
-
-document.getElementById("menuServicos").addEventListener("click", function(){
-mensagemMenu.textContent = "Você acessou a seção Serviços.";
-});
-
-document.getElementById("menuContato").addEventListener("click", function(){
-mensagemMenu.textContent = "Você acessou a seção Contato.";
-});
-
-
-/* TROCA DE IMAGEM */
-
-let img = document.getElementById("imagemSite");
-
-img.addEventListener("mouseover", function(){
-img.src = "planta2.jpg";
-});
-
-img.addEventListener("mouseout", function(){
-img.src = "planta.jpg";
-});
-
-
-/* CONTADOR DE CLIQUES */
-
-let cont = 0;
-
-document.getElementById("contadorBtn").addEventListener("click", function(){
-
-cont++;
-document.getElementById("contador").textContent = "Cliques: " + cont;
-
-});
-
-
-/* MODO ESCURO */
-
-let botaoModo = document.getElementById("modoEscuro");
-
-botaoModo.addEventListener("click", function(){
-
-document.body.classList.toggle("dark");
-
-if(document.body.classList.contains("dark")){
-botaoModo.textContent = "☀️ Modo Claro";
-}else{
-botaoModo.textContent = "🌙 Modo Escuro";
-}
-
-});
-
-
-/* VALIDAÇÃO FORMULÁRIO */
-
-document.getElementById("formContato").addEventListener("submit", function(event){
-
-let nome = document.getElementById("nome").value;
-
-if(nome === ""){
-alert("O nome não pode estar vazio");
-event.preventDefault();
-}
-
-});
-
-</script>
+    <header>
+        <div class="header-inner">
+            <h1>EcoVida Sustentável</h1>
+            <p class="subtitle">Soluções ecológicas para um futuro melhor</p>
+
+            <nav>
+                <ul>
+                    <li><a href="#inicio" id="menuInicio">Início</a></li>
+                    <li><a href="#servicos" id="menuServicos">Serviços</a></li>
+                    <li><a href="#planos" id="menuPlanos">Planos</a></li>
+                    <li><a href="#contato" id="menuContato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <p id="mensagemMenu" class="mensagem-menu" aria-live="polite"></p>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="card">
+            <h2>Sobre a empresa</h2>
+
+            <p id="textoEmpresa">
+                A EcoVida Sustentável é uma empresa fictícia dedicada ao desenvolvimento de projetos voltados para
+                sustentabilidade.
+            </p>
+
+            <div class="controls-row">
+                <button id="btnAlterarTexto">Alterar texto</button>
+                <button id="btnMensagem">Clique para receber uma mensagem</button>
+            </div>
+
+            <p id="mensagem" class="mensagem-acao" aria-live="polite"></p>
+
+            <article class="mission">
+                <h3>Nossa missão</h3>
+                <p>Promover práticas sustentáveis e incentivar o uso responsável dos recursos naturais.</p>
+            </article>
+
+            <img id="imagemSite" src="planta.jpg" alt="Planta ilustrativa" width="300">
+        </section>
+
+        <section id="servicos" class="card">
+            <h2>Serviços oferecidos</h2>
+
+            <ul class="servicos-list">
+                <li>Consultoria ambiental</li>
+                <li>Projetos de energia renovável</li>
+                <li>Treinamentos sobre sustentabilidade</li>
+                <li>Planejamento de redução de resíduos</li>
+            </ul>
+
+            <button id="btnCor">Mudar cor da seção</button>
+        </section>
+
+        <section id="planos" class="card">
+            <h2>Tabela de planos</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Plano</th>
+                            <th>Serviços incluídos</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Básico</td>
+                            <td>Consultoria simples</td>
+                            <td>R$200</td>
+                        </tr>
+                        <tr>
+                            <td>Intermediário</td>
+                            <td>Consultoria + treinamento</td>
+                            <td>R$500</td>
+                        </tr>
+                        <tr>
+                            <td>Avançado</td>
+                            <td>Projetos completos</td>
+                            <td>R$900</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+        <section class="card">
+            <h2>Vídeo sobre sustentabilidade</h2>
+
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/UDUoyBwLXaQ" title="Vídeo sobre sustentabilidade"
+                    allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="contato" class="card">
+            <h2>Formulário de contato</h2>
+
+            <form id="formContato" novalidate>
+                <label for="contNome">Nome:</label>
+                <input type="text" id="contNome" name="contNome" required placeholder="Seu nome">
+
+                <label for="contEmail">Email:</label>
+                <input type="email" id="contEmail" name="contEmail" required placeholder="seu@exemplo.com">
+
+                <label for="contMensagem">Mensagem:</label>
+                <textarea id="contMensagem" name="contMensagem" rows="4" required
+                    placeholder="Escreva sua mensagem"></textarea>
+
+                <div class="controls-row">
+                    <button type="submit">Enviar</button>
+                    <button type="button" id="contadorBtn">Clique aqui</button>
+                </div>
+
+                <p id="contador" class="mensagem-acao">Cliques: 0</p>
+            </form>
+
+            <div class="controls-row">
+                <button id="modoEscuro" aria-pressed="false">🌙 Modo Escuro</button>
+            </div>
+        </section>
+
+        <section id="cadastro" class="card">
+            <h2>Cadastro de Usuário</h2>
+
+            <form id="formCadastro" novalidate>
+                <label for="cadNome">Nome:</label>
+                <input type="text" id="cadNome" name="cadNome" required placeholder="Nome completo">
+
+                <label for="cadEmail">Email:</label>
+                <input type="email" id="cadEmail" name="cadEmail" required placeholder="seu@exemplo.com">
+
+                <label for="cadSenha">Senha:</label>
+                <input type="password" id="cadSenha" name="cadSenha" required placeholder="Senha (mín. 6 caracteres)"
+                    minlength="6">
+
+                <label for="cadConfirmar">Confirmar Senha:</label>
+                <input type="password" id="cadConfirmar" name="cadConfirmar" required placeholder="Repita a senha">
+
+                <div class="controls-row">
+                    <button type="submit">Cadastrar</button>
+                </div>
+
+                <p id="mensagemCadastro" class="mensagem-acao" aria-live="polite"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p>Telefone: (27) 98888-7777</p>
+            <p>Email: contato@ecovida.com</p>
+            <p>© 2026 EcoVida Sustentável</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('load', function () {
+            alert('Bem-vindo ao site EcoVida Sustentável!');
+        });
+
+        document.getElementById('btnMensagem').addEventListener('click', function () {
+            document.getElementById('mensagem').textContent = 'Bem-vindo ao meu site desenvolvido com HTML, CSS e JavaScript!';
+        });
+
+        const textoOriginal = document.getElementById('textoEmpresa').textContent;
+        const textoNovo = 'Este site agora possui interatividade com JavaScript!';
+        document.getElementById('btnAlterarTexto').addEventListener('click', function () {
+            const textoEl = document.getElementById('textoEmpresa');
+            textoEl.textContent = (textoEl.textContent === textoOriginal) ? textoNovo : textoOriginal;
+        });
+
+        document.getElementById('btnCor').addEventListener('click', function () {
+            const serv = document.getElementById('servicos');
+            if (serv.classList.contains('servicos-highlight')) {
+                serv.classList.remove('servicos-highlight');
+            } else {
+                serv.classList.add('servicos-highlight');
+            }
+        });
+
+        const mensagemMenuEl = document.getElementById('mensagemMenu');
+        document.getElementById('menuInicio').addEventListener('click', function () {
+            mensagemMenuEl.textContent = 'Você acessou a seção Início.';
+        });
+        document.getElementById('menuServicos').addEventListener('click', function () {
+            mensagemMenuEl.textContent = 'Você acessou a seção Serviços.';
+        });
+        document.getElementById('menuPlanos').addEventListener('click', function () {
+            mensagemMenuEl.textContent = 'Você acessou a seção Planos.';
+        });
+        document.getElementById('menuContato').addEventListener('click', function () {
+            mensagemMenuEl.textContent = 'Você acessou a seção Contato.';
+        });
+
+        const imagemSite = document.getElementById('imagemSite');
+        imagemSite.addEventListener('mouseover', function () {
+            imagemSite.src = 'planta2.jpg';
+        });
+        imagemSite.addEventListener('mouseout', function () {
+            imagemSite.src = 'planta.jpg';
+        });
+
+        let cont = 0;
+        const contadorEl = document.getElementById('contador');
+        document.getElementById('contadorBtn').addEventListener('click', function () {
+            cont++;
+            contadorEl.textContent = 'Cliques: ' + cont;
+        });
+
+        const botaoModo = document.getElementById('modoEscuro');
+        botaoModo.addEventListener('click', function () {
+            document.body.classList.toggle('dark');
+            const isDark = document.body.classList.contains('dark');
+            botaoModo.textContent = isDark ? '☀️ Modo Claro' : '🌙 Modo Escuro';
+            botaoModo.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+        });
+
+        document.getElementById('formContato').addEventListener('submit', function (event) {
+            const nome = document.getElementById('contNome').value.trim();
+            const email = document.getElementById('contEmail').value.trim();
+            const mensagem = document.getElementById('contMensagem').value.trim();
+
+            if (!nome || !email || !mensagem) {
+                alert('Por favor, preencha todos os campos do formulário de contato.');
+                event.preventDefault();
+                return;
+            }
+
+            
+            alert('Mensagem enviada com sucesso!');
+            event.preventDefault();
+            this.reset();
+        });
+
+        document.getElementById('formCadastro').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('cadNome').value.trim();
+            const email = document.getElementById('cadEmail').value.trim();
+            const senha = document.getElementById('cadSenha').value;
+            const confirmar = document.getElementById('cadConfirmar').value;
+            const mensagemCadastro = document.getElementById('mensagemCadastro');
+
+            if (!nome || !email || !senha || !confirmar) {
+                mensagemCadastro.textContent = 'Por favor, preencha todos os campos.';
+                mensagemCadastro.style.color = '#b00020';
+                return;
+            }
+
+            if (senha.length < 6) {
+                mensagemCadastro.textContent = 'A senha deve ter ao menos 6 caracteres.';
+                mensagemCadastro.style.color = '#b00020';
+                return;
+            }
+
+            if (senha !== confirmar) {
+                mensagemCadastro.textContent = 'As senhas não coincidem.';
+                mensagemCadastro.style.color = '#b00020';
+                return;
+            }
+
+            mensagemCadastro.textContent = 'Cadastro realizado com sucesso!';
+            mensagemCadastro.style.color = '#2a7a2f';
+            this.reset();
+        });
+    </script>
 
 </body>
+
 </html>
